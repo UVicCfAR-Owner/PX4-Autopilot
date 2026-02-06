@@ -84,3 +84,6 @@
 [submodule "Tools/simulation/gz"]
 	path = Tools/simulation/gz
 	url = https://github.com/UVicCfAR/PX4-gazebo-models.git
+[submodule "Tools/simulation/gazebo-classic/sitl_gazebo-classic"]
+	path = Tools/simulation/gazebo-classic/sitl_gazebo-classic
+	url = https://github.com/UVicCfAR-Owner/PX4-SITL_gazebo.git
