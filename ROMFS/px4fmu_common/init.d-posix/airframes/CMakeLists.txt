@@ -66,7 +66,11 @@ px4_add_romfs_files(
 	1061_gazebo-classic_r1_rover
 	1062_flightgear_tf-r1
 	1070_gazebo-classic_boat
-
+	
+	1094_gazebo-classic_mini_e
+	1120_gazebo-classic_MIMIQ
+	1121_gazebo-classic_MIMIQLight
+	
 	2507_gazebo-classic_cloudship
 
 	3010_jsbsim_quadrotor_x
