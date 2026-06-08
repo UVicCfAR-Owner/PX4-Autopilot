@@ -1,3 +1,9 @@
+# CFAR PX4 Fork
+This repo is forked from the official PX4 source. It currently fixed at the 1.16.1 release commit. 
+Gazebo submodules are also modified to point to CFAR equivalents (PX4_SITL_gazebo for classic, and [PX4-gazebo-models](https://github.com/UVicCfAR/PX4-gazebo-models) for the 'new' gz). This is where custom aircraft models are maintained.
+
+After recursive cloning, you may run a SITL sim of a custom airframe as normal:
+`make px4_sitl gazebo_MIMIQ`
 # PX4 Drone Autopilot
 
 [![Releases](https://img.shields.io/github/release/PX4/PX4-Autopilot.svg)](https://github.com/PX4/PX4-Autopilot/releases) [![DOI](https://zenodo.org/badge/22634/PX4/PX4-Autopilot.svg)](https://zenodo.org/badge/latestdoi/22634/PX4/PX4-Autopilot)
