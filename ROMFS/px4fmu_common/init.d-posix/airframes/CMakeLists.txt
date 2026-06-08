@@ -68,6 +68,7 @@ px4_add_romfs_files(
 	1070_gazebo-classic_boat
 	
 	1094_gazebo-classic_mini_e
+	1106_gazebo-classic_tarot_650
 	1120_gazebo-classic_MIMIQ
 	1121_gazebo-classic_MIMIQLight
 	
