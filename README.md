@@ -4,6 +4,16 @@ Gazebo submodules are also modified to point to CFAR equivalents (PX4_SITL_gazeb
 
 After recursive cloning, you may run a SITL sim of a custom airframe as normal:
 `make px4_sitl gazebo_MIMIQ`
+
+To add new aircraft models in Gazebo Classic (assuming model source exists in the CfAR Gazebo Classic fork):
+1. Create the Airframe Script in the ROMFS directory
+- e.g. `ROMFS/px4fmu_common/init.d-posix/airframes/22001_my_drone`
+- PX4 parameters are set here, including tuning, actuator setup and other autostart config
+2. Register with cmake: `ROMFS/px4fmu_common/init.d-posix/airframes/CMakeLists.txt`
+3. Add the model to the 'models' list in `src/modules/simulation/simulator_mavlink/sitl_targets_gazebo.cmake`
+4. Run `make clean` and then build the new SITL target.
+
+
 # PX4 Drone Autopilot
 
 [![Releases](https://img.shields.io/github/release/PX4/PX4-Autopilot.svg)](https://github.com/PX4/PX4-Autopilot/releases) [![DOI](https://zenodo.org/badge/22634/PX4/PX4-Autopilot.svg)](https://zenodo.org/badge/latestdoi/22634/PX4/PX4-Autopilot)
