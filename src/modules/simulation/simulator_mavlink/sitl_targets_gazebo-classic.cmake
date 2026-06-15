@@ -107,6 +107,7 @@ if(gazebo_FOUND)
 		MIMIQLight
 		MIMIQ
 		tarot_650
+		dragonfly
 	)
 
 	set(worlds
