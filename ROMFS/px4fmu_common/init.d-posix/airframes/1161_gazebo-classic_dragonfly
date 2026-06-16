@@ -45,26 +45,26 @@ param set-default PWM_MAIN_FUNC4 104
 ##SYSTEMS
 	#Power
 	param set-default BAT1_N_CELLS 6
-	param set-default BAT1_CAPACITY 7000
+	param set-default BAT1_CAPACITY 2200
 	param set-default BAT1_R_INTERNAL 0.01
 
 	#Serial comms settings
-	param set-default MAV_1_CONFIG 102
-	param set-default MAV_1_MODE 2
-	param set-default MAV_1_RATE 5000
-	param set-default MAV_0_FORWARD 0
-	param set-default SER_TEL1_BAUD 115200
-	param set-default SER_TEL2_BAUD 115200
+	#param set-default MAV_1_CONFIG 102
+	#param set-default MAV_1_MODE 2
+	#param set-default MAV_1_RATE 5000
+	#param set-default MAV_0_FORWARD 0
+	#param set-default SER_TEL1_BAUD 115200
+	#param set-default SER_TEL2_BAUD 115200
 
 	#LIDAR settings
-	param set-default SENS_EN_LL40LS 2
-	param set-default EKF2_RNG_AID 1
-	param set-default EKF2_RNG_A_HMAX 10
-	param set-default EKF2_RNG_A_VMAX 2
-	param set-default EKF2_RNG_PITCH 0
-	param set-default EKF2_RNG_POS_X 0.05
-	param set-default EKF2_RNG_POS_Y 0.045
-	param set-default EKF2_RNG_POS_Z 0.03
+	#param set-default SENS_EN_LL40LS 2
+	#param set-default EKF2_RNG_AID 1
+	#param set-default EKF2_RNG_A_HMAX 10
+	#param set-default EKF2_RNG_A_VMAX 2
+	#param set-default EKF2_RNG_PITCH 0
+	#param set-default EKF2_RNG_POS_X 0.05
+	#param set-default EKF2_RNG_POS_Y 0.045
+	#param set-default EKF2_RNG_POS_Z 0.03
 
 	#EKF
 	param set-default EKF2_HGT_MODE 1 	#1 is baro, 2 is GPS
@@ -88,29 +88,41 @@ param set-default PWM_MAIN_FUNC4 104
 
 ##CONTROLLER TUNING
 	#Rate controller
-	MPC_PITCHRATE_D 0.008
-	MPC_PITCHRATE_I 0.275
-	MPC_PITCHRATE_P 0.200
+	param set-default MC_PITCHRATE_P 0.12
+	param set-default MC_PITCHRATE_I 0.25
+	param set-default MC_PITCHRATE_D 0.012
 	
-	MPC_ROLLRATE_D 0.008
-	MPC_ROLLRATE_I 0.275
-	MPC_ROLLRATE_P 0.200
+	param set-default MC_ROLLRATE_P 0.12
+	param set-default MC_ROLLRATE_I 0.25
+	param set-default MC_ROLLRATE_D 0.012
 	
-	MPC_YAWRATE_I 0.200
-	MPC_YAWRATE_P 0.200
+	param set-default MC_YAWRATE_P 0.15
+	param set-default MC_YAWRATE_I 0.15
+	param set-default MC_YAWRATE_D 0.01
 	
 	#Attitude controller
+	param set-default MC_PITCH_P 4.5
+	param set-default MC_ROLL_P 4.5
+	param set-default MC_YAW_P 1.25
 	
 	#Position Controller
-	param set-default MPC_THR_HOVER 30.0
-	#param set-default MPC_VEL_MANUAL 6.0
-	#param set-defualt MPC_XY_VEL_MAX 6.0
-
+	param set-default MPC_TILTMAX_AIR 50
+	param set-default MPC_MAN_TILT_MAX 60
+	
+	param set-default MPC_THR_HOVER 35.0
+	param set-default MPC_VEL_MANUAL 20
+	param set-default MPC_XY_VEL_MAX 25
+	param set-default MPC_XY_CRUISE  25
+	
+	param set-default MPC_XY_VEL_D_ACC 0.3
+	param set-default MPC_Z_VEL_D_ACC 0.4
+	param set-default MPC_ACC_HOR 4.0
+	
 	#Max rates
-	param set-default MC_ROLLRATE_MAX 65
-	param set-default MC_PITCHRATE_MAX 65
-	param set-default MC_YAWRATE_MAX 40
-	param set-default MPC_YAWRAUTO_MAX 40
+	param set-default MC_ROLLRATE_MAX 50
+	param set-default MC_PITCHRATE_MAX 100
+	param set-default MC_YAWRATE_MAX 50
+	param set-default MPC_YAWRAUTO_MAX 50
 
 	#Max rates ACRO
 	param set-default MC_ACRO_P_MAX 65
