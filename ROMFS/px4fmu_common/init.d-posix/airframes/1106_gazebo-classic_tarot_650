@@ -50,16 +50,16 @@ param set-default PWM_MAIN_FUNC4 104
 	param set-default BAT1_R_INTERNAL 0.01
 
 	#Serial comms settings
-	param set-default MAV_1_CONFIG 102
+	#param set-default MAV_1_CONFIG 102
 	param set-default MAV_1_MODE 2
 	param set-default MAV_1_RATE 5000
 	param set-default MAV_0_FORWARD 0
-	param set-default SER_TEL1_BAUD 115200
-	param set-default SER_TEL2_BAUD 115200
+	#param set-default SER_TEL1_BAUD 115200
+	#param set-default SER_TEL2_BAUD 115200
 
 	#LIDAR settings
-	param set-default SENS_EN_LL40LS 2
-	param set-default EKF2_RNG_AID 1
+	#param set-default SENS_EN_LL40LS 2
+	#param set-default EKF2_RNG_AID 1
 	param set-default EKF2_RNG_A_HMAX 10
 	param set-default EKF2_RNG_A_VMAX 2
 	param set-default EKF2_RNG_PITCH 0
@@ -68,7 +68,7 @@ param set-default PWM_MAIN_FUNC4 104
 	param set-default EKF2_RNG_POS_Z 0.03
 
 	#EKF
-	param set-default EKF2_HGT_MODE 1 	#1 is baro, 2 is GPS
+	#param set-default EKF2_HGT_MODE 1 	#1 is baro, 2 is GPS
 
 	#Motor settings
 	#param set-default PWM_MIN 1100   Not working on sitl (did it got deleted in 1.12?)
@@ -102,15 +102,14 @@ param set-default PWM_MAIN_FUNC4 104
 
 	param set-default MC_YAWRATE_P 0.4
 	param set-default MC_YAWRATE_I 0.5
-	param set-default MC_YAWRATE_D 0
+	param set-default MC_YAWRATE_D 0.0
 
 	#Attitude controller
-	param set-default MC_ROLL_P 4
-	param set-default MC_PITCH_P 4
+	param set-default MC_ROLL_P 4.0
+	param set-default MC_PITCH_P 4.0
 	param set-default MC_YAW_P 2.8
 	
 	#Position Controller
-	param set-default MPC_THR_HOVER 35.00
 	param set-default MPC_VEL_MANUAL 6.0
 	param set-defualt MPC_XY_VEL_MAX 6.0
 
