@@ -108,6 +108,7 @@ if(gazebo_FOUND)
 		MIMIQ
 		tarot_650
 		dragonfly
+		otter
 	)
 
 	set(worlds
@@ -121,6 +122,7 @@ if(gazebo_FOUND)
 		warehouse
 		windy
 		yosemite
+		otter
 	)
 
 	# find corresponding airframes
