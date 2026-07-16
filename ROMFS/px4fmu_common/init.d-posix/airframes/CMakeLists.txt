@@ -115,6 +115,7 @@ px4_add_romfs_files(
 	10041_sihsim_airplane
 	10042_sihsim_xvert
 	10043_sihsim_standard_vtol
+	10152_gazebo-classic_otter
 
 	17001_flightgear_tf-g1
 	17002_flightgear_tf-g2
