@@ -47,8 +47,9 @@ param set-default CA_ROTOR4_AY 0
 param set-default CA_ROTOR4_AZ 0
 param set-default CA_ROTOR4_PX -0.268643
 param set-default CA_ROTOR4_PY 0
-param set-default CA_ROTOR4_PZ -0.035
-param set-default CA_ROTOR4_KM -0.0196
+param set-default CA_ROTOR4_PZ 0 #-0.035
+param set-default CA_ROTOR4_KM 0.0196 #-0.0196
+param set-default CA_ROTOR4_CT 33.72
 
 param set-default CA_SV_CS_COUNT 6        # 6 Control Surfaces
 
@@ -70,117 +71,123 @@ param set-default CA_SV_CS4_TRQ_Y 0.5
 param set-default CA_SV_CS5_TYPE 4        # left Rudder
 param set-default CA_SV_CS5_TRQ_Y 0.5
 
-param set-default PWM_MAIN_FUNC1 101      # Motor 0
-param set-default PWM_MAIN_FUNC2 102      # Motor 1
-param set-default PWM_MAIN_FUNC3 103      # Motor 2
-param set-default PWM_MAIN_FUNC4 104      # Motor 3
-param set-default PWM_MAIN_FUNC5 105      # Motor Pusher
-param set-default PWM_MAIN_FUNC6 201      # Right Aileron
-param set-default PWM_MAIN_FUNC7 202      # Left Aileron
-param set-default PWM_MAIN_FUNC8 203      # Right Elevator
-param set-default PWM_MAIN_FUNC9 204      # Left Elevator
-param set-default PWM_MAIN_FUNC10 205     # Right Rudder
-param set-default PWM_MAIN_FUNC11 206     # Left Rudder
+param set-default PWM_MAIN_FUNC1 101 # Motor 0
+param set-default PWM_MAIN_FUNC2 102 # Motor 1
+param set-default PWM_MAIN_FUNC3 103 # Motor 2
+param set-default PWM_MAIN_FUNC4 104 # Motor 3
+param set-default PWM_MAIN_FUNC5 105 # Motor Pusher
+param set-default PWM_MAIN_FUNC6 201 # Right Aileron
+param set-default PWM_MAIN_FUNC7 202 # Left Aileron
+param set-default PWM_MAIN_FUNC8 203 # Right Elevator
+param set-default PWM_MAIN_FUNC9 204 # Left Elevator
+param set-default PWM_MAIN_FUNC10 205 # Right Rudder
+param set-default PWM_MAIN_FUNC11 206 # Left Rudder
 
-			          ######### FW: Fixed Wing Mode ############
+######### FW: Fixed Wing Mode ############
 
-param set-default FW_AIRSPD_MAX 28        # Max Speed
-param set-default FW_AIRSPD_MIN 11        # Min Speed
-param set-default FW_AIRSPD_STALL 10      # Stall
-param set-default FW_THR_ASPD_MAX 1     # Max throttle allowed at max airspeed 
+param set-default FW_AIRSPD_MAX 28    # Max Speed
+param set-default FW_AIRSPD_MIN 13    # Min Speed
+param set-default FW_AIRSPD_STALL 11  # Stall
+param set-default FW_THR_ASPD_MAX 1.0 # Max throttle allowed at max airspeed 
 
-param set-default FW_THR_MAX 1          # Max throttle in FW mode
-param set-default FW_THR_MIN 0.05         # Min Throttle in FW mode
+param set-default FW_THR_MAX 1.0    # Max throttle in FW mode
+param set-default FW_THR_MIN 0.05   # Min Throttle in FW mode
 
 # TRIM CONDITIONS
-param set-default FW_PSP_OFF 5            # 5 Degrees trim
-param set-default FW_THR_TRIM 0.82        # Cruise throttle at trim
-param set-default FW_AIRSPD_TRIM 22       # Cruise
 
-param set-default FW_P_LIM_MAX 60         # Max nose up pitch angle
-param set-default FW_T_CLMB_MAX 4.5         # Max climb rate m/s
+param set-default FW_PSP_OFF 5      # 5 Degrees trim
+param set-default FW_THR_TRIM 0.82  # Cruise throttle at trim
+param set-default FW_AIRSPD_TRIM 22 # Cruise
 
-param set-default FW_P_LIM_MIN -60        # Max nose down pitch angle
-param set-default FW_T_SINK_MAX 2.7       # max descent rate m/s
+param set-default FW_P_LIM_MAX 25   # Max nose up pitch angle
+param set-default FW_T_CLMB_MAX 3.0 # Max climb rate m/s
 
-param set-default FW_T_SINK_MIN 2.2       # min sink rate m/s
+param set-default FW_P_LIM_MIN -25  # Max nose down pitch angle
+param set-default FW_T_SINK_MAX 2.7 # max descent rate m/s
 
-param set-default FW_R_LIM 50             # Max bank angle 
+param set-default FW_T_SINK_MIN 2.2 # min sink rate m/s
+param set-default FW_R_LIM 35       # Max bank angle 
 
-param set-default FW_PR_FF 0.2            # Pitch rate feedforward - improves pitch response
-param set-default FW_PR_P 0.9             # Pitch rate P gain constant - how strongly it fights pitch rate errors
-param set-default FW_RR_FF 0.1            # roll rate feedforward
-param set-default FW_RR_P 0.3             # roll rate P gain constant
-param set-default FW_YR_FF 0.1            # yaw rate feedforward
-param set-default FW_YR_P 0.3             # yaw rate proportional gain constant 
-param set-default FW_T_HRATE_FF 0.3       # Height rate feedforward
+param set-default FW_PR_FF 0.2      # Pitch rate feedforward - improves pitch response
+param set-default FW_PR_P 0.9       # Pitch rate P gain constant - how strongly it fights pitch rate errors
+param set-default FW_RR_FF 0.1      # roll rate feedforward
+param set-default FW_RR_P 0.3       # roll rate P gain constant
+param set-default FW_YR_FF 0.1      # yaw rate feedforward
+param set-default FW_YR_P 0.3       # yaw rate proportional gain constant 
+param set-default FW_T_HRATE_FF 0.3 # Height rate feedforward
 
-param set-default FW_T_THR_DAMP 0.1       # Throttle damping
+param set-default FW_T_THR_DAMP 0.1 # Throttle damping
 
-param set-default FW_T_TIME_CONST 5.0     # TECS time constant — higher = smoother but slower response
-param set-default FW_T_VERT_ACC 7.0       # Max vertical acceleration m/s²
+param set-default FW_T_TIME_CONST 5.0 # TECS time constant — higher = smoother but slower response
+param set-default FW_T_VERT_ACC 7.0   # Max vertical acceleration m/s²
 
+########## MC: Multirotor mode ############	
+			  
+param set-default MC_AIRMODE 2       # Enables airmode — motors stay spinning even at zero throttle for control authority
 
-				 ########## MC: Multirotor mode ############				  
-param set-default MC_AIRMODE 0            # Enables airmode — motors stay spinning even at zero throttle for control authority
+param set-default MC_ROLLRATE_K 1.0  # Roll rate K gain
+param set-default MC_PITCHRATE_K 1.0 # Pitch rate K gain
+param set-default MC_YAWRATE_K 1.0   # Yaw rate K gain
 
-param set-default MC_ROLLRATE_K 1      # Roll rate K gain
-param set-default MC_PITCHRATE_K 1     # Pitch rate K gain
-param set-default MC_YAWRATE_K 1       # Yaw rate K gain
+param set-default MC_ROLLRATE_P 0.3  # Roll rate P gain
+param set-default MC_PITCHRATE_P 0.8 # Pitch rate P gain
+param set-default MC_YAWRATE_P 5     # Yaw rate P gain
 
-param set-default MC_ROLLRATE_P 0.38    # Roll rate P gain
-param set-default MC_PITCHRATE_P 0.9     # Pitch rate P gain
-param set-default MC_YAWRATE_P 5    # Yaw rate P gain
+param set-default MC_ROLLRATE_D 0.01  # Roll rate D gain
+param set-default MC_PITCHRATE_D 0.01 # Pitch rate D gain
+param set-default MC_YAWRATE_D 0.001  # Roll rate D gain 
 
-param set-default MC_ROLLRATE_D 0.06   # Roll rate D gain
-param set-default MC_PITCHRATE_D 0.04   # Pitch rate D gain
-param set-default MC_YAWRATE_D 0.0003     # Roll rate D gain 
+param set-default MC_ROLLRATE_I 0.2   # Roll rate I gain 0.2
+param set-default MC_PITCHRATE_I 0.1  # Pitch rate I gain
+param set-default MC_YAWRATE_I 0.8    # Yaw rate I gain
 
-param set-default MC_ROLLRATE_I 0.4        # Roll rate I gain 0.2
-param set-default MC_PITCHRATE_I 0.1     # Pitch rate I gain
-param set-default MC_YAWRATE_I 0.8        # Yaw rate I gain
+param set-default MC_ROLL_P 1.0     # Roll angle P gain 1.3
+param set-default MC_PITCH_P 1.0    # Pitch angle P gain 1.55
+param set-default MC_YAW_P 4.0      # Yaw angle P gain 2.5
 
-param set-default MC_ROLL_P 1.3         # Roll angle P gain
-param set-default MC_PITCH_P 1.55          # Pitch angle P gain
-param set-default MC_YAW_P 3             # Yaw angle P gain 2.5
+param set-default MPC_TILTMAX_AIR 20.0
 
-param set-default MPC_XY_VEL_P_ACC 1.8
-param set-default MPC_Z_VEL_P_ACC 4
+param set-default MC_PITCHRATE_MAX 60.0
+param set-default MC_ROLLRATE_MAX 60.0
+param set-default MC_YAWRATE_MAX 60.0
+
+param set-default MPC_XY_VEL_P_ACC 1.3
+param set-default MPC_Z_VEL_P_ACC 4.0
 
 param set-default MPC_XY_VEL_I_ACC 0.4
 param set-default MPC_Z_VEL_I_ACC 2.5
 
-param set-default MPC_XY_VEL_D_ACC 0.2
-param set-default MPC_Z_VEL_D_ACC 0
+param set-default MPC_XY_VEL_D_ACC 0.35
+param set-default MPC_Z_VEL_D_ACC 0.0
 
-param set-default MPC_XY_VEL_MAX 28
-param set-default MPC_XY_CRUISE 12
+param set-default MPC_XY_VEL_MAX 4.0
+param set-default MPC_XY_CRUISE 4.0
 
-param set-default MPC_XY_P 0.1  # 0.2 Vertical Position
-param set-default MPC_Z_P 1     # Horizontal Position
+param set-default MPC_XY_P 0.1    # 0.2 Vertical Position
+param set-default MPC_Z_P 1.0     # Horizontal Position
 
 param set-default MPC_MAN_Y_MAX 25.0
 param set-default MPC_MAN_Y_TAU 0.15
+param set-default MPC_TILTMAX_AIR 25
+param set-default MPC_MAN_TILT_MAX 25
 
-param set-default MIS_TAKEOFF_ALT 10      # Auto takeoff altitude meters
+param set-default MIS_TAKEOFF_ALT 10     # Auto takeoff altitude meters
 param set-default NPFG_PERIOD 8          # PFG path following period in seconds — how aggressively it tracks waypoints. Higher = gentler turns
-param set-default NAV_ACC_RAD 15           # Waypoint acceptance radius (5m) — how close to a waypoint before moving to next
+param set-default NAV_ACC_RAD 30         # Waypoint acceptance radius (5m) — how close to a waypoint before moving to next
 
 				 ########## VTOL mode ############
 
-param set-default VT_FWD_THRUST_EN 0      # Enables pusher motor assist during MC mode for forward flight
-param set-default VT_FWD_THRUST_SC 1      # Pusher thrust scale factor during MC forward flight
+param set-default VT_FWD_THRUST_EN 0     # Enables pusher motor assist during MC mode for forward flight
+param set-default VT_FWD_THRUST_SC 1     # Pusher thrust scale factor during MC forward flight
 param set-default VT_F_TRANS_THR 1.0     # Pusher throttle during forward transition
 
-param set-default VT_ARSP_TRANS 16        # Transition airspeed
-param set-default VT_ARSP_BLEND 12        # Blend start airspeed
-param set-default VT_F_TRANS_DUR 15       # Forward transition duration
+param set-default VT_ARSP_TRANS 16       # Transition airspeed
+param set-default VT_ARSP_BLEND 12       # Blend start airspeed
+param set-default VT_F_TRANS_DUR 15      # Forward transition duration
 
 param set-default VT_B_TRANS_THR 0.1     # Throttle during back transition
-param set-default VT_B_TRANS_DUR 8        # Back transition duration
-param set-default VT_B_DEC_MSS 2          # Deceleration rate m/s²
-param set-default VT_TYPE 2               # Standard VTOL
-param set-default MIS_YAW_TMT 15          # Time alotted before failling transition yaw
+param set-default VT_B_TRANS_DUR 10      # Back transition duration
+param set-default VT_TYPE 2              # Standard VTOL
+param set-default MIS_YAW_TMT 15         # Time alotted before failling transition yaw
+param set-default MIS_YAW_ERR 25         # Time alotted before failling transition yaw
 
-#param set MPC_THR_HOVER 0.65              # Hover Throttle
-#param set MPC_THR_MAX 0.95
