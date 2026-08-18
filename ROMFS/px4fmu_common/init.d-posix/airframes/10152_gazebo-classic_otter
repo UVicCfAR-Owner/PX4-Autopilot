@@ -85,13 +85,9 @@ param set-default PWM_MAIN_FUNC11 206 # Left Rudder
 
 ######### FW: Fixed Wing Mode ############
 
-<<<<<<< HEAD
 param set-default FW_AIRSPD_MAX 21    # Max Speed
 param set-default FW_AIRSPD_MIN 12    # Min Speed
-=======
-param set-default FW_AIRSPD_MAX 22    # Max Speed
-param set-default FW_AIRSPD_MIN 13    # Min Speed
->>>>>>> 4e1525da2e3cd91ead781b1a5b4ed62a2ba640d4
+
 param set-default FW_AIRSPD_STALL 11  # Stall
 param set-default FW_THR_ASPD_MAX 1.0 # Max throttle allowed at max airspeed 
 
@@ -100,15 +96,9 @@ param set-default FW_THR_MIN 0.05   # Min Throttle in FW mode
 
 # TRIM CONDITIONS
 
-<<<<<<< HEAD
 param set-default FW_PSP_OFF 5.3      # 5 Degrees trim
 param set-default FW_THR_TRIM 0.5  # Cruise throttle at trim
 param set-default FW_AIRSPD_TRIM 14 # Cruise
-=======
-param set-default FW_PSP_OFF 6      # Trim Pitch Angle
-param set-default FW_THR_TRIM 0.7   # Trim at throttle cruise
-param set-default FW_AIRSPD_TRIM 18 # Cruise Speed m/s
->>>>>>> 4e1525da2e3cd91ead781b1a5b4ed62a2ba640d4
 
 param set-default FW_P_LIM_MAX 25   # Max nose up pitch angle
 param set-default FW_T_CLMB_MAX 3.0 # Max climb rate m/s
@@ -121,17 +111,16 @@ param set-default FW_R_LIM 35       # Max bank angle
 
 # Pitch Rate
 param set-default FW_PR_FF 0.2      # Pitch rate feedforward - improves pitch response
-<<<<<<< HEAD
 param set-default FW_PR_P 0.65       # Pitch rate P gain constant - how strongly it fights pitch rate errors 0.9
-=======
-param set-default FW_PR_P 0.9       # Pitch rate P gain constant - how strongly it fights pitch rate errors
+
 # Roll Rate
->>>>>>> 4e1525da2e3cd91ead781b1a5b4ed62a2ba640d4
 param set-default FW_RR_FF 0.1      # roll rate feedforward
 param set-default FW_RR_P 0.3       # roll rate P gain constant
+
 # Yaw Rate
 param set-default FW_YR_FF 0.1      # yaw rate feedforward
 param set-default FW_YR_P 0.3       # yaw rate proportional gain constant 
+
 # TECS
 param set-default FW_T_HRATE_FF 0.3   # Height rate feedforward
 param set-default FW_T_VERT_ACC 7.0   # Max vertical acceleration m/s²
@@ -162,15 +151,9 @@ param set-default MC_ROLLRATE_I 0.2      # Roll rate I gain
 param set-default MC_PITCHRATE_I 0.3     # Pitch rate I gain
 param set-default MC_YAWRATE_I 0.4       # Yaw rate I gain
 
-<<<<<<< HEAD
 param set-default MC_ROLL_P 3.0          # Roll angle P gain 1.0
 param set-default MC_PITCH_P 2.5        # Pitch angle P gain 1.0
 param set-default MC_YAW_P 3.0             # Yaw angle P gain 
-=======
-param set-default MC_ROLL_P 2.5          # Roll angle P gain
-param set-default MC_PITCH_P 2.0         # Pitch angle P gain
-param set-default MC_YAW_P 4             # Yaw angle P gain 
->>>>>>> 4e1525da2e3cd91ead781b1a5b4ed62a2ba640d4
 
 # Velocity Control
 param set-default MPC_XY_VEL_P_ACC 1.30
@@ -187,11 +170,7 @@ param set-default MPC_Z_VEL_D_ACC 0.0
 param set-default MPC_XY_VEL_MAX 4.0
 param set-default MPC_XY_CRUISE 4.0
 
-<<<<<<< HEAD
 param set-default MPC_XY_P 0.04    # 0.2 Horizontal Position
-=======
-param set-default MPC_XY_P 0.1    # Horizontal Position
->>>>>>> 4e1525da2e3cd91ead781b1a5b4ed62a2ba640d4
 param set-default MPC_Z_P 1.0     # Vertical Position
 
 param set-default MPC_MAN_Y_MAX 25.0
