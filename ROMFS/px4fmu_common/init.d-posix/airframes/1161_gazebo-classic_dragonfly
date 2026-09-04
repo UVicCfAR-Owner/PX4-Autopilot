@@ -148,6 +148,7 @@ param set-default PWM_MAIN_FUNC4 104
 	param set-default MPC_Z_V_AUTO_UP 4.0
 	param set-default MPC_Z_V_AUTO_DN 2.0
 	param set-default MPC_LAND_SPEED 0.6
+	param set-default MPC_LAND_ALT_1 7.5
 	
 	param set-default MPC_YAW_MODE 3
 	
@@ -176,7 +177,7 @@ param set-default PWM_MAIN_FUNC4 104
 	param set-default FW_R_LIM 40.0
 	
 	param set-default FW_THR_TRIM 0.35
-	param set-default FW_THR_MAX 1.0
+	param set-default FW_THR_MAX 0.8
 	param set-default FW_THR_MIN 0.1
 	
 	param set-default FW_T_CLMB_MAX 5.0
@@ -186,10 +187,13 @@ param set-default PWM_MAIN_FUNC4 104
 	
 	param set-default FW_T_HRATE_FF 0.3
 	param set-default FW_T_I_GAIN_PIT 0.15
+	param set-default FW_T_RLL2THR 20.0
+	param set-defualt FW_T_STE_R_TC 0.80
+	param set-defualt FW_T_THR_DAMPING 0.075
 	
 	param set-default FW_AIRSPD_STALL 15
 	param set-default FW_AIRSPD_MIN 17
-	param set-default FW_AIRSPD_TRIM 21
+	param set-default FW_AIRSPD_TRIM 23
 	param set-default FW_AIRSPD_MAX 30
 	
 	param set-default NAV_LOITER_RAD 80.0
@@ -221,3 +225,4 @@ param set-default PWM_MAIN_FUNC4 104
 	param set-default RC_MAP_KILL_SW 7
 ## SAFETY
 	param set-default RTL_RETURN_ALT 30.0
+	param set-default RTL_TYPE 0
