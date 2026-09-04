@@ -127,7 +127,7 @@ param set-default FW_T_VERT_ACC 7.0   # Max vertical acceleration m/s²
 
 
 ########## MC: Multirotor mode ############				  
-param set-defualt MAN_ARM_GESTURE 0
+param set-defualt MAN_ARM_GESTURE FALSE
 #param set-default MC_AIRMODE 2  # Enables airmode — R/P/Y (causing vertical control issue - test carefully)
 param set-default MC_AIRMODE 1  # Enables airmode — R/P
 
@@ -203,4 +203,4 @@ param set-default MIS_YAW_TMT 15         # Time alotted before failling transiti
 param set-default MIS_YAW_ERR 25         # Time alotted before failling transition yaw
 
 ########## Safety ############
-RTL_RETURN_ALT 40.0
+param set-default RTL_RETURN_ALT 40.0

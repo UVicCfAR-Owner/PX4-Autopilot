@@ -19,26 +19,29 @@ param set-default CA_AIRFRAME 4
 # No control surfaces
 param set-default CA_SV_CS_COUNT 0
 # No airspeed
-param set-default FW_USE_AIRSPD 0
-param set-default SYS_HAS_NUM_ASPD 0
+param set-default FW_USE_AIRSPD 1
+param set-default SYS_HAS_NUM_ASPD 1
+param set-default FW_ARSP_SCALE_EN 0
 
 # Transition time
 param set-default VT_ARSP_TRANS 0.0
 param set-default VT_ARSP_BLEND 0.0
 
 param set-default VT_TRANS_MIN_TM 4.0
-param set-default VT_F_TRANS_DUR 15.0
+param set-default VT_F_TRANS_DUR 5.0
 param set-default VT_F_TR_OL_TM 5.0
 
-param set-default VT_B_TRANS_DUR 3.5
-param set-default VT_B_DEC_MSS 1.5
+param set-default VT_B_TRANS_DUR 6.0
+param set-default VT_B_DEC_MSS 2.5
+
+param set-default VT_FW_MIN_ALT 15.0
 
 # Differential Thrust
 param set-default VT_FW_DIFTHR_EN 7
 
-param set-default VT_FW_DIFTHR_S_P 0.9
-param set-default VT_FW_DIFTHR_S_R 0.7
-param set-default VT_FW_DIFTHR_S_Y 0.7
+param set-default VT_FW_DIFTHR_S_P 0.75
+param set-default VT_FW_DIFTHR_S_R 0.6
+param set-default VT_FW_DIFTHR_S_Y 0.6
 
 param set-default WV_EN 0
 #Mixer 
@@ -128,8 +131,8 @@ param set-default PWM_MAIN_FUNC4 104
 	
 	param set-default MPC_THR_HOVER 0.25
 	param set-default MPC_VEL_MANUAL 20
-	param set-default MPC_XY_VEL_MAX 20
-	param set-default MPC_XY_CRUISE  20
+	param set-default MPC_XY_VEL_MAX 25
+	param set-default MPC_XY_CRUISE  25
 	
 	param set-default MPC_XY_VEL_P_ACC 2.15
 	
@@ -144,7 +147,7 @@ param set-default PWM_MAIN_FUNC4 104
 	
 	param set-default MPC_Z_V_AUTO_UP 4.0
 	param set-default MPC_Z_V_AUTO_DN 2.0
-	param set-default MPC_LAND_SPEED 0.4
+	param set-default MPC_LAND_SPEED 0.6
 	
 	param set-default MPC_YAW_MODE 3
 	
@@ -162,43 +165,50 @@ param set-default PWM_MAIN_FUNC4 104
 	param set-default MC_ACRO_Y_MAX 60
 	
 	## Fixed Wing
-	param set-default FW_PSP_OFF 25 # Set as needed. This is for std wing config.
-	param set-default FW_P_RMAX_NEG 30.0
-	param set-default FW_P_RMAX_POS 30.0
-	param set-default FW_R_RMAX 30.0
-	param set-default FW_Y_RMAX 30.0
+	param set-default FW_PSP_OFF 15 # Set as needed. This is for std wing config.
+	param set-default FW_P_RMAX_NEG 20.0
+	param set-default FW_P_RMAX_POS 20.0
+	param set-default FW_R_RMAX 20.0
+	param set-default FW_Y_RMAX 20.0
 	
-	param set-default FW_P_LIM_MAX 45
-	param set-default FW_P_LIM_MIN 24 # Set as needed. This is for std wing config.
-	param set-default FW_R_LIM 35.0
+	param set-default FW_P_LIM_MAX 35
+	param set-default FW_P_LIM_MIN 0 # Set as needed. This is for std wing config.
+	param set-default FW_R_LIM 40.0
 	
 	param set-default FW_THR_TRIM 0.35
-	param set-default FW_THR_MAX 0.95
-	param set-default FW_THR_MIN 0.05
+	param set-default FW_THR_MAX 1.0
+	param set-default FW_THR_MIN 0.1
 	
-	param set-default FW_T_CLMB_MAX 5
-	param set-default FW_T_SINK_MAX 5
+	param set-default FW_T_CLMB_MAX 5.0
+	param set-default FW_T_CLMB_R_SP 4.0
+	param set-default FW_T_SINK_MAX 4.0
+	param set-default FW_T_SINK_R_SP 3.0
+	
+	param set-default FW_T_HRATE_FF 0.3
+	param set-default FW_T_I_GAIN_PIT 0.15
 	
 	param set-default FW_AIRSPD_STALL 15
 	param set-default FW_AIRSPD_MIN 17
-	param set-default FW_AIRSPD_TRIM 20
-	param set-default FW_AIRSPD_MAX 28
+	param set-default FW_AIRSPD_TRIM 21
+	param set-default FW_AIRSPD_MAX 30
 	
-	param set-default NAV_LOITER_RAD 100.0
-	param set-default RTL_LOITER_RAD 100.0
-	param set-default NPFG_PERIOD 7.5
+	param set-default NAV_LOITER_RAD 80.0
+	param set-default RTL_LOITER_RAD 80.0
+	param set-default NPFG_PERIOD 9.0
+	param set-default NPFG_SW_DST_MLT 0.60
+	param set-default NPFG_ROLL_TC 0.75
 	
 	# Rate Control
-	param set-default FW_PR_FF 0.2
+	param set-default FW_PR_FF 0.1
 	param set-default FW_PR_D 0.002
 	param set-default FW_PR_I 0.1
-	param set-default FW_PR_P 0.18
+	param set-default FW_PR_P 0.1
 	
 	param set-default FW_RR_FF 0.2
 	param set-default FW_RR_D 0.002
-	param set-default FW_RR_P 0.25
+	param set-default FW_RR_P 0.2
 	
-	param set-default FW_YR_P 0.20
+	param set-default FW_YR_P 0.10
 	param set-default FW_YR_I 0.1
 	param set-default FW_YR_D 0.002
 	
