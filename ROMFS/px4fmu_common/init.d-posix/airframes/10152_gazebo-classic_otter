@@ -86,7 +86,7 @@ param set-default PWM_MAIN_FUNC11 206 # Left Rudder
 ######### FW: Fixed Wing Mode ############
 
 param set-default FW_AIRSPD_MAX 21    # Max Speed
-param set-default FW_AIRSPD_MIN 12    # Min Speed
+param set-default FW_AIRSPD_MIN 13    # Min Speed
 
 param set-default FW_AIRSPD_STALL 11  # Stall
 param set-default FW_THR_ASPD_MAX 1.0 # Max throttle allowed at max airspeed 
@@ -96,18 +96,18 @@ param set-default FW_THR_MIN 0.05   # Min Throttle in FW mode
 
 # TRIM CONDITIONS
 
-param set-default FW_PSP_OFF 5.3      # 5 Degrees trim
+param set-default FW_PSP_OFF 6.0      # 5 Degrees trim
 param set-default FW_THR_TRIM 0.5  # Cruise throttle at trim
-param set-default FW_AIRSPD_TRIM 14 # Cruise
+param set-default FW_AIRSPD_TRIM 15 # Cruise
 
-param set-default FW_P_LIM_MAX 25   # Max nose up pitch angle
+param set-default FW_P_LIM_MAX 18   # Max nose up pitch angle
 param set-default FW_T_CLMB_MAX 3.0 # Max climb rate m/s
 
-param set-default FW_P_LIM_MIN -25  # Max nose down pitch angle
-param set-default FW_T_SINK_MAX 2.7 # max descent rate m/s
+param set-default FW_P_LIM_MIN -5  # Max nose down pitch angle
+param set-default FW_T_SINK_MAX 3.0 # max descent rate m/s
 
-param set-default FW_T_SINK_MIN 2.2 # min sink rate m/s
-param set-default FW_R_LIM 35       # Max bank angle 
+param set-default FW_T_SINK_MIN 1.0 # min sink rate m/s
+param set-default FW_R_LIM 40       # Max bank angle 
 
 # Pitch Rate
 param set-default FW_PR_FF 0.2      # Pitch rate feedforward - improves pitch response
