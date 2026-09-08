@@ -110,21 +110,23 @@ param set-default FW_T_SINK_MIN 1.0 # min sink rate m/s
 param set-default FW_R_LIM 40       # Max bank angle 
 
 # Pitch Rate
-param set-default FW_PR_FF 0.2      # Pitch rate feedforward - improves pitch response
-param set-default FW_PR_P 0.65       # Pitch rate P gain constant - how strongly it fights pitch rate errors 0.9
+param set-default FW_PR_FF 0.2       # Pitch rate feedforward - improves pitch response
+param set-default FW_PR_P 0.1        # Pitch rate P gain constant - how strongly it fights pitch rate errors 0.9
+param set-default FW_P_RMAX_NEG 30.0 # Rate Limits
+param set-default FW_P_RMAX_POS 30.0
 
 # Roll Rate
 param set-default FW_RR_FF 0.1      # roll rate feedforward
-param set-default FW_RR_P 0.3       # roll rate P gain constant
+param set-default FW_RR_P 0.1       # roll rate P gain constant
+param set-default FW_R_RMAX 50.0    # rate limit
 
 # Yaw Rate
 param set-default FW_YR_FF 0.1      # yaw rate feedforward
-param set-default FW_YR_P 0.3       # yaw rate proportional gain constant 
+param set-default FW_YR_P 0.1       # yaw rate proportional gain constant 
 
 # TECS
 param set-default FW_T_HRATE_FF 0.3   # Height rate feedforward
 param set-default FW_T_VERT_ACC 7.0   # Max vertical acceleration m/s²
-
 
 ########## MC: Multirotor mode ############				  
 param set-defualt MAN_ARM_GESTURE FALSE
