@@ -198,9 +198,10 @@ param set-default VT_ARSP_BLEND 10       # Blend start airspeed
 param set-default VT_F_TRANS_DUR 15      # Forward transition duration
 
 param set-default VT_B_TRANS_DUR 10      # Back transition duration
+param set-default VT_B_DEC_MSS 1.0 
 param set-default VT_TYPE 2              # Standard VTOL
 param set-default MIS_YAW_TMT 15         # Time alotted before failling transition yaw
 param set-default MIS_YAW_ERR 25         # Time alotted before failling transition yaw
 
 ########## Safety ############
-param set-default RTL_RETURN_ALT 40.0
+param set-default RTL_RETURN_ALT 30.0
