@@ -211,18 +211,26 @@ param set-default PWM_MAIN_FUNC4 104
 	param set-default NPFG_SW_DST_MLT 0.60
 	param set-default NPFG_ROLL_TC 0.75
 	
-	# Rate Control
+	# FW Attitude
+	param set-default FW_R_TC 1.0
+	param set-default FW_R_RMAX 30.0
+	
+	param set-default FW_P_TC 0.50
+	param set-default FW_P_RMAX_NEG 30.0
+	param set-default FW_P_RMAX_POS 30.0
+	
+	# FW Rate Control
 	param set-default FW_PR_FF 0.1
 	param set-default FW_PR_D 0.002
 	param set-default FW_PR_I 0.1
-	param set-default FW_PR_P 0.1
+	param set-default FW_PR_P 0.05
 	
-	param set-default FW_RR_FF 0.2
-	param set-default FW_RR_D 0.002
-	param set-default FW_RR_P 0.2
+	param set-default FW_RR_FF 0.1
+	param set-default FW_RR_D 0.001
+	param set-default FW_RR_P 0.05
 	
 	param set-default FW_YR_P 0.10
-	param set-default FW_YR_I 0.1
+	param set-default FW_YR_I 0.05
 	param set-default FW_YR_D 0.002
 	
 ##TANSMITTER
