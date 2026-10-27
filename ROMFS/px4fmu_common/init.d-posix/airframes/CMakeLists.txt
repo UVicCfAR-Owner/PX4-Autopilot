@@ -67,10 +67,12 @@ px4_add_romfs_files(
 	1062_flightgear_tf-r1
 	1070_gazebo-classic_boat
 	
+	# CFAR MODELS
 	1094_gazebo-classic_mini_e
 	1106_gazebo-classic_tarot_650
 	1120_gazebo-classic_MIMIQ
 	1121_gazebo-classic_MIMIQLight
+	1152_gazebo-classic_otter
 	1161_gazebo-classic_dragonfly
 	
 	2507_gazebo-classic_cloudship
@@ -115,8 +117,7 @@ px4_add_romfs_files(
 	10041_sihsim_airplane
 	10042_sihsim_xvert
 	10043_sihsim_standard_vtol
-	10152_gazebo-classic_otter
-
+	
 	17001_flightgear_tf-g1
 	17002_flightgear_tf-g2
 
