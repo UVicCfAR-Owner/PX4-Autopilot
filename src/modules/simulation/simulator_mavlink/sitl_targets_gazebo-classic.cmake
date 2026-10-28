@@ -109,6 +109,7 @@ if(gazebo_FOUND)
 		tarot_650
 		dragonfly
 		otter
+		heron
 	)
 
 	set(worlds

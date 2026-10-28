@@ -1,0 +1,128 @@
+#!/bin/sh
+#
+# @name VTOL Tiltrotor
+#
+# @type VTOL Tiltrotor
+#
+
+. ${R}etc/init.d/rc.vtol_defaults
+
+# TODO: Enable motor failure detection when the
+# VTOL no longer reports 0A for all ESCs in SITL
+
+param set-default FD_ACT_EN 0
+param set-default FD_ACT_MOT_TOUT 500     # Motor timeout in milliseconds
+
+param set-default MAV_TYPE 21
+param set-default CA_AIRFRAME 3        
+param set-default CA_ROTOR_COUNT 3
+param set-default CA_SV_TL_COUNT 2
+
+# Rotor 0: front right
+param set-default CA_ROTOR0_PX 0.1
+param set-default CA_ROTOR0_PY 0.65
+param set-default CA_ROTOR0_PZ 0.1
+param set-default CA_ROTOR0_TILT 1
+param set-default CA_ROTOR0_KM -0.05
+
+param set-default CA_SV_TL0_MINA 0
+param set-default CA_SV_TL0_MAXA 90
+
+# Rotor 1: front left
+param set-default CA_ROTOR1_PX 0.1
+param set-default CA_ROTOR1_PY -0.65
+param set-default CA_ROTOR1_PZ 0.1
+param set-default CA_ROTOR1_TILT 2
+param set-default CA_ROTOR1_KM 0.05
+
+param set-default CA_SV_TL1_MINA 0
+param set-default CA_SV_TL1_MAXA 90
+
+# Rotor 2: rear centre, fixed
+param set-default CA_ROTOR2_PX -0.5
+param set-default CA_ROTOR2_PY 0.0
+param set-default CA_ROTOR2_PZ 0.1
+param set-default CA_ROTOR2_KM 0.05
+
+param set-default CA_SV_CS_COUNT 0        # Control Surfaces
+
+param set-default PWM_MAIN_FUNC1 101 # Motor 0
+param set-default PWM_MAIN_FUNC2 102 # Motor 1
+param set-default PWM_MAIN_FUNC3 103 # Motor 2
+param set-default PWM_MAIN_FUNC4 201 # Servo 1 (tilt 1)
+param set-default PWM_MAIN_FUNC5 202 # Servo 2 (tilt 2)
+
+########## MC: Multirotor mode ############				  
+param set-default MAN_ARM_GESTURE 0
+param set-default MC_AIRMODE 2  # Enables airmode — R/P/Y (causing vertical control issue - test carefully)
+
+param set-default MC_PITCHRATE_MAX 80.0
+param set-default MC_ROLLRATE_MAX 80.0
+param set-default MC_YAWRATE_MAX 80.0
+
+param set-default MC_ROLLRATE_K 1.0      # Roll rate K gain
+param set-default MC_PITCHRATE_K 1.0     # Pitch rate K gain
+param set-default MC_YAWRATE_K 2.0       # Yaw rate K gain
+
+param set-default MC_ROLLRATE_P 0.25     # Roll rate P gain
+param set-default MC_PITCHRATE_P 0.25    # Pitch rate P gain 
+param set-default MC_YAWRATE_P 0.40      # Yaw rate P gain 
+
+param set-default MC_ROLLRATE_D 0.008    # Roll rate D gain
+param set-default MC_PITCHRATE_D 0.008   # Pitch rate D gain
+param set-default MC_YAWRATE_D 0.05      # Yaw rate D gain 
+
+param set-default MC_ROLLRATE_I 0.35     # Roll rate I gain 
+param set-default MC_PITCHRATE_I 0.35    # Pitch rate I gain
+param set-default MC_YAWRATE_I 0.1       # Yaw rate I gain
+
+param set-default MC_ROLL_P 3.5          # Roll angle P gain
+param set-default MC_PITCH_P 3.5         # Pitch angle P gain 
+param set-default MC_YAW_P 3.0           # Yaw angle P gain 
+
+# Velocity Control
+param set-default MPC_XY_VEL_P_ACC 1.50
+
+param set-default MPC_XY_VEL_I_ACC 0.4
+param set-default MPC_Z_VEL_I_ACC 2.5
+
+param set-default MPC_XY_MAX 10.0
+param set-default MPC_XY_CRUISE 8.0
+param set-default MPC_VEL_MANUAL 10.0
+
+param set-default MPC_XY_P 0.4    # 0.2 Horizontal Position
+param set-default MPC_Z_P 1.0     # Vertical Position
+
+param set-default MPC_MAN_Y_MAX 65.0
+param set-default MPC_MAN_Y_TAU 0.15
+
+param set-default MPC_TILTMAX_AIR 20
+param set-default MPC_MAN_TILT_MAX 20
+
+param set-default MPC_THR_MIN 0.20
+param set-default MPC_MANTHR_MIN 0.15
+param set-default MPC_THR_HOVER 0.65
+
+param set-default MIS_TAKEOFF_ALT 10     # Auto takeoff altitude meters
+param set-default NPFG_PERIOD 8          # PFG path following period in seconds. Higher = gentler turns
+param set-default NAV_ACC_RAD 20         # Waypoint acceptance radius
+
+########## VTOL mode ############
+param set-default WV_EN 0
+
+param set-default VT_FWD_THRUST_EN 1     # Enables pusher motor assist during MC mode for forward flight
+param set-default VT_FWD_THRUST_SC 1     # Pusher thrust scale factor during MC forward flight
+param set-default VT_F_TRANS_THR 1.0     # Pusher throttle during forward transition
+
+param set-default VT_ARSP_TRANS 14       # Transition airspeed
+param set-default VT_ARSP_BLEND 10       # Blend start airspeed
+param set-default VT_F_TRANS_DUR 15      # Forward transition duration
+
+param set-default VT_B_TRANS_DUR 10      # Back transition duration
+param set-default VT_B_DEC_MSS 1.0 
+param set-default VT_TYPE 1              # VTOL
+param set-default MIS_YAW_TMT 15         # Time alotted before failling transition yaw
+param set-default MIS_YAW_ERR 25         # Time alotted before failling transition yaw
+
+########## Safety ############
+param set-default RTL_RETURN_ALT 20.0

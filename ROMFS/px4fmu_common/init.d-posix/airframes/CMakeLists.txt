@@ -74,6 +74,7 @@ px4_add_romfs_files(
 	1121_gazebo-classic_MIMIQLight
 	1152_gazebo-classic_otter
 	1161_gazebo-classic_dragonfly
+	1162_gazebo-classic_heron
 	
 	2507_gazebo-classic_cloudship
 
