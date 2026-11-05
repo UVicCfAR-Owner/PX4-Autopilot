@@ -66,31 +66,28 @@ param set-default MC_YAWRATE_K 2.0       # Yaw rate K gain
 
 param set-default MC_ROLLRATE_P 0.25     # Roll rate P gain
 param set-default MC_PITCHRATE_P 0.25    # Pitch rate P gain 
-param set-default MC_YAWRATE_P 0.40      # Yaw rate P gain 
+param set-default MC_YAWRATE_P 0.25      # Yaw rate P gain 
 
 param set-default MC_ROLLRATE_D 0.008    # Roll rate D gain
 param set-default MC_PITCHRATE_D 0.008   # Pitch rate D gain
-param set-default MC_YAWRATE_D 0.05      # Yaw rate D gain 
+param set-default MC_YAWRATE_D 0.04     # Yaw rate D gain 
 
 param set-default MC_ROLLRATE_I 0.35     # Roll rate I gain 
 param set-default MC_PITCHRATE_I 0.35    # Pitch rate I gain
-param set-default MC_YAWRATE_I 0.1       # Yaw rate I gain
+param set-default MC_YAWRATE_I 0.15       # Yaw rate I gain
 
 param set-default MC_ROLL_P 3.5          # Roll angle P gain
 param set-default MC_PITCH_P 3.5         # Pitch angle P gain 
-param set-default MC_YAW_P 3.0           # Yaw angle P gain 
+param set-default MC_YAW_P 2.0           # Yaw angle P gain 
 
 # Velocity Control
-param set-default MPC_XY_VEL_P_ACC 1.50
-
-param set-default MPC_XY_VEL_I_ACC 0.4
 param set-default MPC_Z_VEL_I_ACC 2.5
 
-param set-default MPC_XY_MAX 10.0
-param set-default MPC_XY_CRUISE 8.0
-param set-default MPC_VEL_MANUAL 10.0
+param set-default MPC_XY_VEL_MAX 12.0
+param set-default MPC_XY_CRUISE 10.0
+param set-default MPC_VEL_MANUAL 12.0
 
-param set-default MPC_XY_P 0.4    # 0.2 Horizontal Position
+param set-default MPC_XY_P 0.5    # 0.2 Horizontal Position
 param set-default MPC_Z_P 1.0     # Vertical Position
 
 param set-default MPC_MAN_Y_MAX 65.0
