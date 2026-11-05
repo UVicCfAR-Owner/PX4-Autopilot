@@ -24,15 +24,15 @@ param set-default SYS_HAS_NUM_ASPD 1
 param set-default FW_ARSP_SCALE_EN 0
 
 # Transition time
-param set-default VT_ARSP_TRANS 0.0
-param set-default VT_ARSP_BLEND 0.0
+param set-default VT_ARSP_TRANS 18.0
+param set-default VT_ARSP_BLEND 12.0
 
 param set-default VT_TRANS_MIN_TM 4.0
 param set-default VT_F_TRANS_DUR 5.0
 param set-default VT_F_TR_OL_TM 5.0
 
 param set-default VT_B_TRANS_DUR 6.0
-param set-default VT_B_DEC_MSS 2.5
+param set-default VT_B_DEC_MSS 1.75
 
 param set-default VT_FW_MIN_ALT 15.0
 
@@ -173,12 +173,12 @@ param set-default PWM_MAIN_FUNC4 104
 	param set-default FW_R_RMAX 20.0
 	param set-default FW_Y_RMAX 20.0
 	
-	param set-default FW_P_LIM_MAX 40.0
-	param set-default FW_P_LIM_MIN -10.0 # Set as needed. This is for std wing config.
+	param set-default FW_P_LIM_MAX 30.0
+	param set-default FW_P_LIM_MIN -5.0 # Set as needed. This is for std wing config.
 	param set-default FW_R_LIM 35.0
 	
 	param set-default FW_THR_TRIM 0.35
-	param set-default FW_THR_MAX 0.8
+	param set-default FW_THR_MAX 0.6
 	param set-default FW_THR_MIN 0.1
 	
 	# Climb
@@ -194,21 +194,21 @@ param set-default PWM_MAIN_FUNC4 104
 	param set-default FW_T_HRATE_FF 0.4
 	param set-default FW_T_I_GAIN_PIT 0.15
 	param set-default FW_T_RLL2THR 20.0
-	param set-default FW_T_SPDWEIGHT 0.6
-	param set-default FW_T_ALT_TC 2.50
+	param set-default FW_T_SPDWEIGHT 0.8
+	param set-default FW_T_ALT_TC 2.5
 	
 	#param set-default FW_T_STE_R_TC 0.80
 	#param set-default FW_T_THR_DAMPING 0.075
 	
 	param set-default FW_AIRSPD_STALL 15
-	param set-default FW_AIRSPD_MIN 17
-	param set-default FW_AIRSPD_TRIM 23
-	param set-default FW_AIRSPD_MAX 30
+	param set-default FW_AIRSPD_MIN 20
+	param set-default FW_AIRSPD_TRIM 24
+	param set-default FW_AIRSPD_MAX 28
 	
 	param set-default NAV_LOITER_RAD 80.0
 	param set-default RTL_LOITER_RAD 80.0
 	param set-default NPFG_PERIOD 9.0
-	param set-default NPFG_SW_DST_MLT 0.60
+	param set-default NPFG_SW_DST_MLT 0.70
 	param set-default NPFG_ROLL_TC 0.75
 	
 	# FW Attitude
@@ -227,9 +227,9 @@ param set-default PWM_MAIN_FUNC4 104
 	
 	param set-default FW_RR_FF 0.1
 	param set-default FW_RR_D 0.001
-	param set-default FW_RR_P 0.05
+	param set-default FW_RR_P 0.04
 	
-	param set-default FW_YR_P 0.10
+	param set-default FW_YR_P 0.05
 	param set-default FW_YR_I 0.05
 	param set-default FW_YR_D 0.002
 	
